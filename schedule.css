@@ -1,0 +1,164 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+  
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 140px;
+  background-color: #303C42;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+body > .container {
+  padding: 70px 15px 0;
+}
+
+h1 {
+	font-size: 50px;
+	font-family: 'Gudea', Arial, sans-serif;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: 'Gudea', Arial, sans-serif;
+}
+
+p { 
+	font-size: 18px;
+	font-family: 'Gudea', Arial, sans-serif;
+}
+
+.navbar-custom {
+	background-color: #3172AE;
+	border: none;
+	padding: 0px 0px; 
+}
+
+.navbar-custom .navbar-brand {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.navbar-custom #navbar li a {
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.navbar-custom #navbar li a:hover {
+	color: #cfd8dc;
+}
+
+.navbar-custom #navbar li a:hover {
+	color: #cfd8dc;
+}
+
+.navbar-custom #navbar li.active a {
+	background: #346094;
+}
+
+.footer {
+	padding: 20px 0px;
+	background-color: #3172AE;
+}
+
+footer p {
+	color: #cfd8dc;
+	font-size: 14px;
+}
+
+footer h3 {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+footer a {
+	color: #cfd8dc;
+}
+
+footer a:hover, footer a:active {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.center {
+	padding: 40px 15px;
+	text-align: center;
+}
+
+.schedule {
+}
+
+.date {
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.event {
+	padding: 20px 0px;
+	border-bottom: 1px solid #c6c6c6;
+}
+
+.event:last-of-type {
+	margin-bottom: 60px;
+}
+
+.noborder {
+	border: none;
+	margin-bottom: 30px;
+}
+
+.speaker {
+	
+}
+
+.time p {
+	
+	font-size: 24px;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#3172AE;
+}
+
+.intro {
+	background-color: #F7F7F7;
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+
+.category {
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
