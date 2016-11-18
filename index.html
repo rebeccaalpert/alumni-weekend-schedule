@@ -165,7 +165,7 @@
 				var day = $(this);
 				var visibleKids = day.children(":visible");
 				/* If no events visible */
-				if (visibleKids.length == 1) {
+				if (visibleKids.length <= 1) {
 					day.hide();
 				} else {
 					day.show();
