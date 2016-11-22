@@ -201,6 +201,13 @@ footer ul {
 	padding: 10px;
 }
 
+.event-type .main-tag {
+	font-size: 14px;
+	background-color: #7EA8AD;
+	color: #ffffff;
+	padding: 10px;
+}
+
 .title {
 	font-weight: bold;
 	font-size: 24px;
