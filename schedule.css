@@ -159,22 +159,12 @@ footer ul {
 	padding-bottom: 20px;
 }
 
-.event {
-	padding: 20px 0px;
-	border-bottom: 1px solid #c6c6c6;
+.speaker {
+	
 }
 
 .event:last-of-type {
 	margin-bottom: 60px;
-}
-
-.noborder {
-	border: none;
-	margin-bottom: 30px;
-}
-
-.speaker {
-	
 }
 
 .event-time {
@@ -229,7 +219,7 @@ footer .btn {
 	margin-bottom: 20px;
 }
 
-.intro {
+.secondary-navbar-desktop {
 	background-color: #F7F7F7;
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -279,6 +269,70 @@ footer .btn {
 	border-bottom: 1px solid #c6c6c6;
 	padding-top: 30px;
 	padding-bottom: 20px;
+}
+
+.event {
+	padding: 20px 0px;
+	border-bottom: 1px solid #c6c6c6;
+}
+
+.active-category {
+	background: #c6c6c6;
+	padding: 20px; 
+}
+
+category a {
+	text-decoration: none;
+}
+
+a:link, a:hover, a:visited, a:active {
+	text-decoration: none;
+}
+
+.btn-blue { 
+  color: #ffffff; 
+  background-color: #418FDE; 
+  border: none; 
+} 
+ 
+.btn-blue:hover, 
+.btn-blue:focus, 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  color: #ffffff; 
+  background-color: #0E5CAB; 
+  border: none; 
+} 
+ 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  background-image: none; 
+} 
+ 
+.btn-blue.disabled, 
+.btn-blue[disabled], 
+fieldset[disabled] .btn-blue, 
+.btn-blue.disabled:hover, 
+.btn-blue[disabled]:hover, 
+fieldset[disabled] .btn-blue:hover, 
+.btn-blue.disabled:focus, 
+.btn-blue[disabled]:focus, 
+fieldset[disabled] .btn-blue:focus, 
+.btn-blue.disabled:active, 
+.btn-blue[disabled]:active, 
+fieldset[disabled] .btn-blue:active, 
+.btn-blue.disabled.active, 
+.btn-blue[disabled].active, 
+fieldset[disabled] .btn-blue.active { 
+  background-color: #418FDE; 
+  border: none; 
+} 
+ 
+.btn-blue .badge { 
+  color: #418FDE; 
+  background-color: #ffffff; 
 }
 
 /* IE 6 */
