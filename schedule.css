@@ -275,7 +275,11 @@ footer .btn, .secondary-navbar-mobile .btn {
 	margin-bottom: 60px;
 }
 
-.secondary-navbar-mobile .btn {
+.secondary-navbar-mobile {
+	background-color: #F7F7F7;
+	margin-top: 0;
+	margin-left: 0;
+	margin-bottom: 60px;
 }
 
 .category {
