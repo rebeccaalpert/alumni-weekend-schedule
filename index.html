@@ -48,10 +48,10 @@
     <div class="container">
     	<!-- MOBILE NAVIGATION -->
    		<div class="container center secondary-navbar-mobile">
-    	<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#class-filter" href="#">Filter Events</button>
+    	<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#filter-events" href="#">Filter Events</button>
         
         <!-- Modal -->
-			<div class="modal modal-fullscreen fade" id="class-filter" tabindex="-1" role="dialog" aria-labelledby="Filter Class Events">
+			<div class="modal modal-fullscreen fade" id="filter-events" tabindex="-1" role="dialog" aria-labelledby="Filter Events">
   				<div class="modal-dialog" role="document">
     				<div class="modal-content">
       					<div class="modal-header">
@@ -60,16 +60,16 @@
       					</div>
       					<div class="modal-body">
                             <div class="col-sm-12 class-category">
-								<p><a href="#" id="all-button">All Events</a></p>
+								<p><a href="#" id="all-button-mobile">All Events</a></p>
                             </div>
                         	<div class="col-sm-12 class-category">
-								<p><a href="#" id="main-button">Main Events</a></p>
+								<p><a href="#" id="main-button-mobile">Main Events</a></p>
                             </div>
                             <div class="col-sm-12 class-category">
-								<p><a href="#" id="class-button">All Class Events</a></p>
+								<p><a href="#" id="class-button-mobile">All Class Events</a></p>
                             </div>
                             <div class="col-sm-12 class-category">
-								<p><a href="#" id="seminar-button">Super Seminars</a></p>
+								<p><a href="#" id="seminar-button-mobile">Super Seminars</a></p>
                             </div>
         				</div>
       					<div class="modal-footer center-block">
@@ -226,9 +226,25 @@
 				$(".seminar").show();
 				removeHiddenDays();
 			});
+			$("#seminar-button-mobile").click(function(event) {
+	    		event.preventDefault();
+				setActiveCategory("#seminar-button-mobile");
+				$(".class-event").hide();
+				$(".main-event").hide();
+				$(".seminar").show();
+				removeHiddenDays();
+			});
 			$("#main-button").click(function(event) {
 				event.preventDefault();
 				setActiveCategory("#main-button");
+				$(".seminar").hide();
+				$(".class-event").hide();
+				$(".main-event").show();
+				removeHiddenDays();
+			});
+			$("#main-button-mobile").click(function(event) {
+				event.preventDefault();
+				setActiveCategory("#main-button-mobile");
 				$(".seminar").hide();
 				$(".class-event").hide();
 				$(".main-event").show();
@@ -242,9 +258,23 @@
 				$(".class-event").show()
 				removeHiddenDays();
 			});
+			$("#class-button-mobile").click(function(event) {
+	    		event.preventDefault();
+				setActiveCategory("#class-button-mobile");
+				$(".seminar").hide();
+				$(".main-event").show();
+				$(".class-event").show()
+				removeHiddenDays();
+			});
 			$("#all-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#all-button");
+				$(".event").show();
+				$(".day").show();
+			});
+			$("#all-button-mobile").click(function(event) {
+	    		event.preventDefault();
+				setActiveCategory("#all-button-mobile");
 				$(".event").show();
 				$(".day").show();
 			});
