@@ -69,6 +69,15 @@
 								<p><a href="#" id="class-button-mobile">All Class Events</a></p>
                             </div>
                             <div class="col-sm-12 class-category">
+                            	<p><a id="by-class-button-mobile" data-toggle="collapse" href="#by-class" aria-expanded="false" aria-controls="by-class">Events By Class <span class="caret"></span></a></p>
+                                <div class="collapse" id="by-class">	
+                            	<select>
+                                    <option value="1953" selected="selected">1953</option>
+                                  	<option value="1962">1962</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 class-category">
 								<p><a href="#" id="seminar-button-mobile">Super Seminars</a></p>
                             </div>
         				</div>
@@ -175,6 +184,15 @@
             	<p class="title">Test Class Event</p>
             </div>
         </div>
+        <div class="event col-sm-12 class-event 1953">
+        	<div class="col-sm-4">
+        	  <p class="event-time">3:45 pm</p>
+              <p class="event-type"><span class="class-tag">Class Event (1953)</span></p>
+            </div>
+            <div class="details col-sm-8">
+            	<p class="title">Test Class of 1953 Event</p>
+            </div>
+        </div>
         <div class="event col-sm-12 seminar">
         	<div class="col-sm-4">
         	  <p class="event-time">3:45 pm</p>
@@ -221,32 +239,28 @@
 			$("#seminar-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#seminar-button");
-				$(".class-event").hide();
-				$(".main-event").hide();
+				$(".event").hide();
 				$(".seminar").show();
 				removeHiddenDays();
 			});
 			$("#seminar-button-mobile").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#seminar-button-mobile");
-				$(".class-event").hide();
-				$(".main-event").hide();
+				$(".event").hide();
 				$(".seminar").show();
 				removeHiddenDays();
 			});
 			$("#main-button").click(function(event) {
 				event.preventDefault();
 				setActiveCategory("#main-button");
-				$(".seminar").hide();
-				$(".class-event").hide();
+				$(".event").hide();
 				$(".main-event").show();
 				removeHiddenDays();
 			});
 			$("#main-button-mobile").click(function(event) {
 				event.preventDefault();
 				setActiveCategory("#main-button-mobile");
-				$(".seminar").hide();
-				$(".class-event").hide();
+				$(".event").hide();
 				$(".main-event").show();
 				removeHiddenDays();
 			});
@@ -278,7 +292,36 @@
 				$(".event").show();
 				$(".day").show();
 			});
+			
+			$("#by-class-button-mobile").click(function(event) {	
+				event.preventDefault();
+				$(".active-category").removeClass("active-category");
+			});
+				
+			$("select").change(function() {
+    			var year = "";
+    			$( "select option:selected" ).each(function() {
+      				year += $( this ).text();
+					displayClassEvents(year);
+    			});
+  			}).trigger( "change" );
+			
+			
 		});
+		
+		function displayClassEvents(classYear) {
+			if (classYear == "1953") {
+				$(".event").hide();
+				$(".main-event").show();
+				$(".1953").show();
+			}
+			if (classYear == "1962") {
+				$(".event").hide();
+				$(".main-event").show();
+				$(".1962").show();
+			}
+			removeHiddenDays();
+		}
 		
 		function removeHiddenDays() {
 			$(".day").show(); // unhide all previously hidden days
