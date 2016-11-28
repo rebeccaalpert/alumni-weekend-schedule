@@ -235,7 +235,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-		$( document ).ready(function() {	
+		$( document ).ready(function() {
 			$("#seminar-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#seminar-button");
@@ -296,15 +296,16 @@
 			$("#by-class-button-mobile").click(function(event) {	
 				event.preventDefault();
 				$(".active-category").removeClass("active-category");
-			});
-				
-			$("select").change(function() {
+				$("select").change(function() {
     			var year = "";
     			$( "select option:selected" ).each(function() {
       				year += $( this ).text();
 					displayClassEvents(year);
     			});
-  			}).trigger( "change" );
+  				}).trigger( "change" );
+			});
+				
+			
 			
 			
 		});
