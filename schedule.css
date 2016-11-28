@@ -32,6 +32,14 @@ body {
 	.footer {
 		height: 320px;
 	}
+	
+	.secondary-navbar-desktop {
+		display: none;
+	}
+	
+	.secondary-navbar-mobile {
+		display: block;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -46,6 +54,14 @@ body {
 	
 	.footer {
 		height: 150px;
+	}
+	
+	.secondary-navbar-desktop {
+		display: block;
+	}
+	
+	.secondary-navbar-mobile {
+		display: none;
 	}
 }
 
@@ -62,12 +78,33 @@ body {
 	.footer {
 		height: 150px;
 	}
+	
+	.secondary-navbar-desktop {
+		display: block;
+	}
+	
+	.secondary-navbar-mobile {
+		display: none;
+	}
 }
 
 /* Custom page CSS
 -------------------------------------------------- */
 body > .container {
   padding: 70px 15px 0;
+}
+
+.navbar-inverse .navbar-toggle {
+    background-color: #3172AE;
+	border: none;
+}
+
+.navbar-inverse .navbar-collapse {
+	border: none;
+}
+
+.navbar-inverse .navbar-collapse .navbar-form {
+	border: none;
 }
 
 h1 {
@@ -151,9 +188,6 @@ footer ul {
 	text-align: center;
 }
 
-.schedule {
-}
-
 .date {
 	padding-top: 0px;
 	padding-bottom: 20px;
@@ -212,7 +246,7 @@ footer ul {
    background:#3172AE;
 }
 
-footer .btn {
+footer .btn, .secondary-navbar-mobile .btn {
 	width: 100%;
 	padding: 20px;
 	margin-top: 20px;
@@ -223,6 +257,9 @@ footer .btn {
 	background-color: #F7F7F7;
 	margin-top: 60px;
 	margin-bottom: 60px;
+}
+
+.secondary-navbar-mobile {
 }
 
 .category {
