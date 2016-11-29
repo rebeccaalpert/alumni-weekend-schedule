@@ -110,7 +110,7 @@ select {
 	font-family: 'Gudea', Arial, sans-serif;
 }
 
-.navbar-inverse .navbar-toggle {
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
     background-color: #3172AE;
 	border: none;
 }
