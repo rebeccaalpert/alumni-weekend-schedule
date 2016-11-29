@@ -44,10 +44,9 @@
         </div>
     </nav>
     
-
     <div class="container">
-    	<!-- MOBILE NAVIGATION -->
-   		<div class="center secondary-navbar-mobile visible-xs visible-sm hidden-md hidden-lg">
+        	<!-- MOBILE NAVIGATION -->
+   			<div class="center secondary-navbar-mobile visible-xs visible-sm hidden-md hidden-lg">
         <h1>Schedule</h1>
     	<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#filter-events" href="#">Filter Events</button>
         
@@ -73,7 +72,8 @@
                             	<p><a id="by-class-button-mobile" data-toggle="collapse" href="#by-class" aria-expanded="false" aria-controls="by-class">Events By Class <span class="caret"></span></a></p>
                                 <div class="collapse" id="by-class">	
                             	<select>
-                                    <option value="1953" selected="selected">1953</option>
+                                	<option value="" selected>Choose Your Year</option>
+                                    <option value="1953">1953</option>
                                   	<option value="1962">1962</option>
                                 </select>
                                 </div>
@@ -83,8 +83,8 @@
                             </div>
         				</div>
       					<div class="modal-footer center-block">
-                        	<button type="button" class="btn btn-primary btn-lg btn-lg-custom" data-dismiss="modal">Submit</button>
-        					<button type="button" class="btn btn-default btn-lg btn-lg-custom" data-dismiss="modal">Cancel</button>
+                        	<button type="button" id="submit-button-mobile" class="btn btn-primary btn-lg btn-lg-custom" data-dismiss="modal">Submit</button>
+        					<button type="button" id="cancel-button-mobile" class="btn btn-default btn-lg btn-lg-custom" data-dismiss="modal">Cancel</button>
       					</div>
     				</div>
   				</div>
@@ -188,7 +188,7 @@
         <div class="event col-sm-12 class-event 1953">
         	<div class="col-sm-4">
         	  <p class="event-time">3:45 pm</p>
-              <p class="event-type"><span class="class-tag">Class Event (1953)</span></p>
+              <p class="event-type"><span class="class-tag">Class Event</span></p>
             </div>
             <div class="details col-sm-8">
             	<p class="title">Test Class of 1953 Event</p>
@@ -230,80 +230,108 @@
     </footer>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Custom filtering and page behavior -->
   <script>
 		$( document ).ready(function() {
+			var isActive = new Boolean(false);
+			
 			$("#seminar-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#seminar-button");
-				$(".event").hide();
-				$(".seminar").show();
+				displaySeminars();
 				removeHiddenDays();
 			});
+			
 			$("#seminar-button-mobile").click(function(event) {
 	    		event.preventDefault();
+				isActive = true;
 				setActiveCategory("#seminar-button-mobile");
-				$(".event").hide();
-				$(".seminar").show();
-				removeHiddenDays();
+				collapseClassYearsSelector(); 
 			});
+			
 			$("#main-button").click(function(event) {
 				event.preventDefault();
 				setActiveCategory("#main-button");
-				$(".event").hide();
-				$(".main-event").show();
+				displayMainEvents();
 				removeHiddenDays();
 			});
+			
 			$("#main-button-mobile").click(function(event) {
 				event.preventDefault();
+				isActive = true;
 				setActiveCategory("#main-button-mobile");
-				$(".event").hide();
-				$(".main-event").show();
-				removeHiddenDays();
+				collapseClassYearsSelector(); 
 			});
+			
 			$("#class-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#class-button");
-				$(".seminar").hide();
-				$(".main-event").show();
-				$(".class-event").show()
+				displayAllClassEvents();
 				removeHiddenDays();
 			});
+			
 			$("#class-button-mobile").click(function(event) {
 	    		event.preventDefault();
+				isActive = true;
 				setActiveCategory("#class-button-mobile");
-				$(".seminar").hide();
-				$(".main-event").show();
-				$(".class-event").show()
-				removeHiddenDays();
+				collapseClassYearsSelector(); 
 			});
+			
 			$("#all-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#all-button");
-				$(".event").show();
-				$(".day").show();
+				displayAllEvents();
 			});
+			
 			$("#all-button-mobile").click(function(event) {
 	    		event.preventDefault();
+				isActive = true;
 				setActiveCategory("#all-button-mobile");
-				$(".event").show();
-				$(".day").show();
+				collapseClassYearsSelector(); 
 			});
 			
 			$("#by-class-button-mobile").click(function(event) {	
 				event.preventDefault();
-				$(".active-category").removeClass("active-category");
-				$("select").change(function() {
-    			var year = "";
-    			$( "select option:selected" ).each(function() {
-      				year += $( this ).text();
-					displayClassEvents(year);
-    			});
-  				}).trigger( "change" );
+				isActive = false;
+				removeActiveCategory();
+			});
+			
+			$("option").click(function(event) {
+				isActive = false;
+				removeActiveCategory();
+			});
+			
+			$("#submit-button-mobile").click(function(event) {
+				if (isActive) {
+					var id = $(".active-category").attr("id");
+					if (id === "seminar-button-mobile") {
+						displaySeminars();
+						removeHiddenDays();
+					}
+					if (id === "class-button-mobile") {
+						displayAllClassEvents();
+						removeHiddenDays();
+					}
+					if (id === "all-button-mobile") {
+						displayAllEvents();
+					}
+					if (id === "main-button-mobile") {
+						displayMainEvents();
+						removeHiddenDays();
+					}
+
+				} else {
+    				var year = "";
+    				$( "option:selected" ).each(function() {
+      					year += $( this ).text();
+						displayClassEvents(year);
+    				});
+				}
 			});
 				
 			
@@ -323,6 +351,27 @@
 				$(".1962").show();
 			}
 			removeHiddenDays();
+		}
+		
+		function displaySeminars() {
+			$(".event").hide();
+			$(".seminar").show();
+		}
+		
+		function displayMainEvents() {
+			$(".event").hide();
+			$(".main-event").show();
+		}
+		
+		function displayAllClassEvents() {
+			$(".event").hide();
+			$(".main-event").show();
+			$(".class-event").show();
+		}
+		
+		function displayAllEvents() {
+			$(".event").show();
+			$(".day").show();
 		}
 		
 		function removeHiddenDays() {
@@ -345,6 +394,14 @@
 		function setActiveCategory(button) {
 			$(".active-category").removeClass("active-category");
 			$(button).addClass("active-category");
+		}
+		
+		function removeActiveCategory() {
+			$(".active-category").removeClass("active-category");
+		}
+		
+		function collapseClassYearsSelector() {
+			$("#by-class").collapse("hide");
 		}
 			
   </script>
