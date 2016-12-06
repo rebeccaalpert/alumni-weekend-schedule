@@ -52,6 +52,7 @@ body {
 	
 	.marquee {
 		font-size: 16px;
+		text-align: left;
 	}
 }
 
