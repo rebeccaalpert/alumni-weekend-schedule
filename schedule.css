@@ -45,6 +45,10 @@ body {
 	.navbar form {
 		display: none;
 	}
+	
+	h1 {
+		font-size: 30px;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -131,7 +135,7 @@ a:link, a:hover, a:visited, a:active {
 
 .event-type {
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .event-type .seminar-tag {
@@ -377,4 +381,10 @@ fieldset[disabled] .btn-blue.active {
 * html #footer {
    position:absolute;
    top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+@media print {
+	footer, .secondary-navbar-mobile, .secondary-navbar-desktop, .event-type .seminar-tag, .event-type .class-tag, .event-type .main-tag {
+		display: none !important;
+	}
 }
