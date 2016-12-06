@@ -51,9 +51,20 @@ body {
 	}
 	
 	.marquee {
+		text-align: center;
 		font-size: 16px;
-		text-align: left;
 	}
+	
+	.navbar-custom .navbar-brand {
+		color: #ffffff;
+		font-size: 26px;
+		padding-left: 15px;
+	}
+
+	.navbar-custom #navbar li a {
+		color: #ffffff;
+		font-size: 18px;
+	}	
 }
 
 /* Medium Devices, Desktops */
@@ -81,6 +92,17 @@ body {
 	
 	.navbar form {
 		display: block;
+	}
+	
+	.navbar-custom .navbar-brand {
+		color: #ffffff;
+		font-size: 24px;
+		padding-left: 15px;
+	}
+
+	.navbar-custom #navbar li a {
+		color: #ffffff;
+		font-size: 16px;
 	}
 }
 
@@ -186,7 +208,7 @@ a:link, a:hover, a:visited, a:active {
 .navbar-custom {
 	background-color: #3172AE;
 	border: none;
-	padding: 0px 0px; 
+	padding: 0px;
 }
 
 .navbar-custom .navbar-brand {
