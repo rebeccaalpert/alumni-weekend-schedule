@@ -49,6 +49,10 @@ body {
 	h1 {
 		font-size: 30px;
 	}
+	
+	.marquee {
+		font-size: 16px;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -224,8 +228,10 @@ footer .btn, .secondary-navbar-mobile .btn {
 
 .secondary-navbar-desktop {
 	background-color: #F7F7F7;
+	margin: auto;
 	margin-top: 60px;
 	margin-bottom: 60px;
+	width: 100%;
 }
 
 .secondary-navbar-mobile {
