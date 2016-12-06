@@ -1,5 +1,4 @@
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer styles */
 html {
   position: relative;
   min-height: 100%;
@@ -27,6 +26,7 @@ body {
 		
 	body {
 		margin-bottom: 320px;
+		margin-top: 70px;
 	}
 	
 	.footer {
@@ -39,6 +39,7 @@ body {
 	
 	.secondary-navbar-mobile {
 		display: block;
+		position: relative;
 	}
 	
 	.navbar form {
@@ -53,7 +54,8 @@ body {
 	}
 	
 	body {
-		margin-bottom: 150px;
+		margin-bottom: 200px;
+		margin-top: 0px;
 	}
 	
 	.footer {
@@ -75,128 +77,33 @@ body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-	.btn-lg-custom {
-		width: 25%;
-	}
-	
-	body {
-		margin-bottom: 150px;
-	}
-	
-	.footer {
-		height: 150px;
-	}
-	
-	.secondary-navbar-desktop {
-		display: block;
-	}
-	
-	.secondary-navbar-mobile {
-		display: none;
-	}
 }
 
 /* Custom page CSS
 -------------------------------------------------- */
+body {
+	font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+}
+
 body > .container {
   padding: 70px 15px 0;
 }
 
-select {
-	width: 100%;
-	background-color: #ffffff;
-	padding: 10px;
-	text-align: center;
-	font-family: 'Gudea', Arial, sans-serif;
-}
-
-.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: #3172AE;
-	border: none;
-}
-
-.navbar-inverse .navbar-collapse {
-	border: none;
-}
-
-.navbar-inverse .navbar-collapse .navbar-form {
-	border: none;
-}
-
 h1 {
 	font-size: 50px;
-	font-family: 'Gudea', Arial, sans-serif;
 }
 
 h2 {
 	font-size: 30px;
-	font-family: 'Gudea', Arial, sans-serif;
 }
 
 p { 
 	font-size: 18px;
-	font-family: 'Gudea', Arial, sans-serif;
+	font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
 }
 
-.navbar-custom {
-	background-color: #3172AE;
-	border: none;
-	padding: 0px 0px; 
-}
-
-.navbar-custom .navbar-brand {
-	color: #ffffff;
-	font-size: 20px;
-}
-
-.navbar-custom #navbar li a {
-	color: #ffffff;
-	font-size: 16px;
-}
-
-.navbar-custom #navbar li a:hover {
-	color: #cfd8dc;
-}
-
-.navbar-custom #navbar li a:hover {
-	color: #cfd8dc;
-}
-
-.navbar-custom #navbar li.active a {
-	background: #346094;
-}
-
-.navbar-custom .collapse .navbar-collapse {
-	
-}
-
-.footer {
-	padding: 20px 0px;
-	background-color: #3172AE;
-}
-
-footer p {
-	color: #cfd8dc;
-	font-size: 14px;
-}
-
-footer h3 {
-	color: #ffffff;
-	font-size: 20px;
-}
-
-footer a {
-	color: #cfd8dc;
-}
-
-footer a:hover, footer a:active {
-	color: #ffffff;
+a:link, a:hover, a:visited, a:active {
 	text-decoration: none;
-}
-
-footer ul {
-	list-style: none;
-	padding: 0px;
 }
 
 .center {
@@ -209,8 +116,9 @@ footer ul {
 	padding-bottom: 20px;
 }
 
-.speaker {
-	
+.event {
+	padding: 20px 0px;
+	border-bottom: 1px solid #c6c6c6;
 }
 
 .event:last-of-type {
@@ -251,6 +159,47 @@ footer ul {
 .title {
 	font-weight: bold;
 	font-size: 24px;
+}
+
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #3172AE;
+	border: none;
+}
+
+.navbar-inverse .navbar-collapse {
+	border: none;
+}
+
+.navbar-inverse .navbar-collapse .navbar-form {
+	border: none;
+}
+
+.navbar-custom {
+	background-color: #3172AE;
+	border: none;
+	padding: 0px 0px; 
+}
+
+.navbar-custom .navbar-brand {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.navbar-custom #navbar li a {
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.navbar-custom #navbar li a:hover {
+	color: #cfd8dc;
+}
+
+.navbar-custom #navbar li a:hover {
+	color: #cfd8dc;
+}
+
+.navbar-custom #navbar li.active a {
+	background: #346094;
 }
 
 #footer {
@@ -332,9 +281,11 @@ footer .btn, .secondary-navbar-mobile .btn {
 	padding-bottom: 20px;
 }
 
-.event {
-	padding: 20px 0px;
-	border-bottom: 1px solid #c6c6c6;
+select {
+	width: 100%;
+	background-color: #ffffff;
+	padding: 10px;
+	text-align: center;
 }
 
 .active-category {
@@ -346,10 +297,36 @@ category a {
 	text-decoration: none;
 }
 
-a:link, a:hover, a:visited, a:active {
+.footer {
+	padding: 20px 0px;
+	background-color: #3172AE;
+}
+
+footer p {
+	color: #cfd8dc;
+	font-size: 14px;
+}
+
+footer h3 {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+footer a {
+	color: #cfd8dc;
+}
+
+footer a:hover, footer a:active {
+	color: #ffffff;
 	text-decoration: none;
 }
 
+footer ul {
+	list-style: none;
+	padding: 0px;
+}
+
+/* Custom Buttons */
 .btn-blue { 
   color: #ffffff; 
   background-color: #418FDE; 
