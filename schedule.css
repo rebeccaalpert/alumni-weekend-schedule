@@ -187,6 +187,20 @@ a:link, a:hover, a:visited, a:active {
 	padding: 10px;
 }
 
+.event-type .religious-event-tag {
+	font-size: 14px;
+	background-color: #00B0B9;
+	color: #ffffff;
+	padding: 10px;
+}
+
+.event-type .open-house-tag {
+	font-size: 14px;
+	background-color: #C83338;
+	color: #ffffff;
+	padding: 10px;
+}
+
 .title {
 	font-weight: bold;
 	font-size: 24px;
@@ -266,6 +280,19 @@ footer .btn, .secondary-navbar-mobile .btn {
 
 .secondary-navbar-mobile h1 {
 	font-size: 40px;
+}
+
+#searchbox {
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	border-radius: 7px;
+}
+
+.tags {
+	display: none;
 }
 
 .category {
