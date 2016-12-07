@@ -43,7 +43,8 @@
         	<!-- MOBILE NAVIGATION -->
    			<div class="center visible-xs visible-sm hidden-md hidden-lg secondary-navbar-mobile">
         <h1>Schedule</h1>
-    	<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#filter-events" href="#">Filter Events</button>
+        <input type="text" id="searchbox" name="search" placeholder="Search...">
+    	<!--<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#filter-events" href="#">Filter Events</button>-->
         
         <!-- Modal -->
 			<div class="modal modal-fullscreen fade" id="filter-events" tabindex="-1" role="dialog" aria-labelledby="Filter Events">
@@ -66,15 +67,21 @@
                             <div class="col-sm-12 class-category">
                             	<p><a id="by-class-button-mobile" data-toggle="collapse" href="#by-class" aria-expanded="false" aria-controls="by-class">Events By Class <span class="caret"></span></a></p>
                                 <div class="collapse" id="by-class">	
+                                <!-- CLASS SELECTION DROPDOWN -->
                             	<select>
                                 	<option value="" selected>Choose Your Year</option>
-                                    <option value="1953">1953</option>
-                                  	<option value="1962">1962</option>
+                                    <option value="1982">1982</option>
                                 </select>
                                 </div>
                             </div>
                             <div class="col-sm-12 class-category">
 								<p><a href="#" id="seminar-button-mobile">Super Seminars</a></p>
+                            </div>
+                            <div class="col-sm-12 class-category">
+								<p><a href="#" id="open-house-button-mobile">Open Houses</a></p>
+                            </div>
+                            <div class="col-sm-12 class-category">
+								<p><a href="#" id="religious-button-mobile">Religious Events</a></p>
                             </div>
         				</div>
       					<div class="modal-footer center-block">
@@ -104,11 +111,37 @@
         	</div>
       	</div>
       
-      <!-- SCHEDULE -->
+      <!-- FULL SCHEDULE -->
       <div class="schedule">
       	<!-- THURSDAY -->
       	<div class="day">
       		<h2 class="date col-sm-12">Thursday, May 18</h2>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">12:00&ndash;5:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Alumni Weekend Registration</p>
+                    <p class="location">Location: Alumnae Hall</p>
+               	 <p class="summary">Sign in, relax, and grab a coffee or soda!</p>
+                 <p class="tags">Thursday May 18</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">10:30 am &amp; 1:30 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Undergraduate Admissions Campus Walking Tours</p>
+                    <p class="location">Location: Dowling Hall</p>
+                    <p class="tags">Thursday May 18</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
         	<div class="event col-sm-12 seminar">
         		<div class="col-sm-4">
                 	<p class="event-time">2:30 pm</p>
@@ -120,8 +153,22 @@
                     <p class="location">Location: Pearson Hall, Room 104</p>
                	 <p class="summary">Hear about a potential new target for curing Alzheimer's disease currently in clinical trials, from the neuroscientist who discovered it!</p>
                  <p class="explore">Explore more: <a href="https://www.youtube.com/watch?v=DtNbswhI2AY" target="_blank">Treating Alzheimer's Disease</a></p>
+                 <p class="tags">Thursday May 18</p>
             	</div>
         	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 super-seminar">
+        		<div class="col-sm-4">
+                	<p class="event-time">3:30 pm</p>
+                    <p class="event-type"><span class="seminar-tag">Super Seminar</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Post-Seminar Reception with Dr. Phillip Haydon</p>
+                    <p class="location">Location: Pearson Hall, Room 106</p>
+                    <p class="tags">Thursday May 18</p>
+           	  </div>
+        	</div>
+            <!-- EVENT BLOCK -->
         	<div class="event col-sm-12 seminar">
         		<div class="col-sm-4">
         	  		<p class="event-time">4:00 pm</p>
@@ -133,42 +180,305 @@
                     <p class="location">Location: Pearson Hall, Room 104</p>
                 	<p class="summary">Can you train your brain to prefer healthy food? Learn more about Dr. Susan Robert's promising new weight loss program, the "I" Diet, which has a very high success rate and uses cutting-edge science to change the way you think.</p>
                     <p class="explore">Explore more: <a href="http://www.bostonmagazine.com/health/blog/2014/11/13/food-cravings-brain-instinct-diet-tufts-idiet/" target="_blank"><em>Boston Magazine</em></a> | <a href="http://now.tufts.edu/articles/train-your-brain-prefer-healthy-foods" target="_blank">Tufts Now</a></p>
+                    <p class="tags">Thursday May 18</p>
                 	
             	</div>
         	</div>
-      </div>
-      
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">6:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Packard Society Reception (invitation only)</p>
+                    <p class="location">Location: Gifford House</p>
+                    <p class="tags">Thursday May 18</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">6:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Pre-Concert Dinner and Cocktails</p>
+                    <p class="location">Location: Balch Arena Lobby, Aidekman Arts Center</p>
+                    <p class="tags">Thursday May 18</p>
+            	</div>
+        	</div>
+      <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">8:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">A Capella Concert and Dance Show</p>
+                    <p class="location">Location: Cohen Auditorium</p>
+                    <p class="tags">Thursday May 18</p>
+            	</div>
+        	</div>
+        </div>
+            
+      <!-- FRIDAY -->
       <div class="day">
       	<h2 class="date col-sm-12">Friday, May 19</h2>
-        <div class="event col-sm-12 main-event">
-        	<div class="col-sm-4">
-        	  	<p class="event-time">5:00 pm</p>
-                <p class="event-type"><span class="main-tag">Main Event</span></p>
-            </div>
-        	<div class="details col-sm-8">
-            	<p class="title">Test Main Event</p>
-                <p class="summary"></p>
-                <p class="speaker"></p>
-            </div>
-        </div>
+        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">10:00 am&ndash;5:00 pm</p>
+                    <p class="event-type featured-event"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Alumni Weekend Registration</p>
+                    <p class="location">Location: Alumnae Hall</p>
+                    <p class="summary">Sign in, relax, and grab a coffee or soda!</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">10:30 am &amp; 1:30 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Undergraduate Admissions Campus Walking Tours</p>
+                    <p class="location">Location: Dowling Hall</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">4:45 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Pre-Pops Buffet</p>
+                    <p class="location">Location: Dewick MacPhie Dining Complex</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 religious-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">6:00 pm</p>
+                    <p class="event-type"><span class="religious-event-tag">Religious Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Shabbat Services</p>
+                    <p class="location">Location: Granoff Family Hillel Center</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 religious-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">7:15 pm</p>
+                    <p class="event-type"><span class="religious-event-tag">Religious Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Shabbat Dinner (reservation only)</p>
+                    <p class="location">Location: Granoff Family Hillel Center</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">6:30 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Bus to Tufts Night at Pops (round trip)</p>
+                    <p class="location">Location: From/To Dewick MacPhie</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">6:45 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">President Monaco's Pre-Pops Reception</p>
+                    <p class="location">Location: Symphony Hall</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">8:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">117th Tufts Night at Pops</p>
+                    <p class="location">Location: Symphony Hall</p>
+                    <p class="summary">Class seating.</p>
+                    <p class="tags">Friday May 19</p>
+            	</div>
+        	</div>
       </div>
 
 	  <div class="day">
       	<h2 class="date col-sm-12">Saturday, May 20</h2>
+        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">9:00 am</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Fun Run with Coach Don Megerle</p>
+                    <p class="location">Location: From Tisch Athletic Complex</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">9:00 am&ndash;3:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Alumni Weekend Registration</p>
+                    <p class="location">Location: Alumnae Hall</p>
+                    <p class="summary">Sign in, relax, and grab a coffee or soda!</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+                <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 religious-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">10:00 am</p>
+                    <p class="event-type"><span class="religious-event-tag">Religious Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Shabbat Services</p>
+                    <p class="location">Location: Granoff Family Hillel Center</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 open-house">
+        		<div class="col-sm-4">
+                	<p class="event-time">10:00 am&ndash;5:00 pm</p>
+                    <p class="event-type"><span class="open-house-tag">Open House</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Tisch Library Open House</p>
+                    <p class="location">Location: Tisch Library</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+        <!-- EVENT BLOCK -->
         <div class="event col-sm-12 seminar">
         	<div class="col-sm-4">
         	  	<p class="event-time">11:00 am</p>
                 <p class="event-type"><span class="seminar-tag">Super Seminar</span></p>
             </div>
         	<div class="details col-sm-8">
-            	<p class="title">The Middle East War Hero: Elliot Ackerman, A02, F02</p>
+            	<p class="title">The State of Play in the Middle East: A Tour Around Syria, Iraq, and Turkey</p>
                 
                 <p class="speaker">Elliot Ackerman, A02, F02</p>
                 <p class="location">Location: Pearson Hall, Room 104</p>
                 <p class="summary">Learn about the Middle East and foreign affairs from an author and decorated veteran who fought in Fallujah.</p>
                 <p class="explore">Explore more: <a href="https://www.youtube.com/watch?v=dScb3z7n1bA" target="_blank">The Fact and Fiction of <em>Homeland</em></a> | <a href="https://www.youtube.com/watch?v=vhMWC9LtSmA" target="_blank"><em>CBS Evening News</em></a> | <a href="http://www.elliotackerman.com/" target="_blank">ElliotAckerman.com</a></p>
+                <p class="tags">Saturday May 20</p>
             </div>
         </div>
+        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">11:45 am</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Cavalcade of Classes Parade</p>
+                    <p class="location">Location: From Goddard Chapel, Academic Quad</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+                    <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">12:00 pm&ndash;2:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Service Day Project</p>
+                    <p class="location">Location: Residential Quad Tent</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">12:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Alumni Family Picnic</p>
+                    <p class="location">Location: Res Quad</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+                        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 open-house">
+        		<div class="col-sm-4">
+                	<p class="event-time">12:00 pm</p>
+                    <p class="event-type"><span class="open-house-tag">Open House</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Music Department Graduation Recital</p>
+                    <p class="location">Location: Granoff Music Center</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+                        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 religious-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">12:30 pm</p>
+                    <p class="event-type"><span class="religious-event-tag">Religious Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Shabbat Lunch</p>
+                    <p class="location">Location: Granoff Family Hillel Center</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+                        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">1:30 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">ROTC Commissioning Ceremony</p>
+                    <p class="location">Location: Goddard Chapel</p>
+                    <p class="summary">Rain site: Sophia Gordon Hall Multi-Purpose Room</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">2:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">ROTC Commissioning Reception</p>
+                    <p class="location">Location: Tisch Library Roof</p>
+                    <p class="summary">Rain site: Sophia Gordon Hall Multi-Purpose Room</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+        <!-- EVENT BLOCK -->
         <div class="event col-sm-12 seminar">
         	<div class="col-sm-4">
         	  <p class="event-time">2:00 pm</p>
@@ -179,26 +489,34 @@
                 <p class="speaker">Sol Gittleman, School of Arts and Sciences</p>
                 <p class="location">Location: Pearson Hall, Room 104</p>
                 <p class="summary"></p>
+                <p class="tags">Saturday May 20</p>
             </div>
         </div>
-        <div class="event col-sm-12 class-event">
-        	<div class="col-sm-4">
-        	  <p class="event-time">3:45 pm</p>
-              <p class="event-type"><span class="class-tag">Class Event</span></p>
-            </div>
-            <div class="details col-sm-8">
-            	<p class="title">Test Class Event</p>
-            </div>
-        </div>
-        <div class="event col-sm-12 class-event 1953">
-        	<div class="col-sm-4">
-        	  <p class="event-time">3:45 pm</p>
-              <p class="event-type"><span class="class-tag">Class Event</span></p>
-            </div>
-            <div class="details col-sm-8">
-            	<p class="title">Test Class of 1953 Event</p>
-            </div>
-        </div>
+        <!-- EVENT BLOCK -->
+        <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">3:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Jumbo Love Photos</p>
+                    <p class="location">Location: Bowen Gate</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+		<!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">3:00&ndash;4:20 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Baccalaureate Service</p>
+                    <p class="location">Location: Gantcher Center</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+        <!-- EVENT BLOCK -->
         <div class="event col-sm-12 seminar">
         	<div class="col-sm-4">
         	  <p class="event-time">3:45 pm</p>
@@ -209,10 +527,89 @@
                 <p class="speaker">Dr. Samuel Sommers, School of Arts and Sciences</p>
                 <p class="location">Location: Pearson Hall, Room 104</p>
                 <p class="summary">Join the Tufts psychologist described as this generation's Sol for an entertaining journey into the psychology of sports. Discover the hidden influences and surprising cues that inspire and derail us on the field and in the stands&mdash;and by extension, in corporate board rooms, office settings, and our daily lives.</p>
+                <p class="tags">Saturday May 20</p>
             </div>
         </div>
+        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 open-house">
+        		<div class="col-sm-4">
+                	<p class="event-time">4:30 pm</p>
+                    <p class="event-type"><span class="open-house-tag">Open House</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">School of Engineering Open House</p>
+                    <p class="location">Location: CLIC Building, 574 Boston Avenue</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+           <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 religious-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">5:30 pm</p>
+                    <p class="event-type"><span class="religious-event-tag">Religious Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Catholic Mass</p>
+                    <p class="location">Location: Goddard Chapel</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 class-event 1982">
+        		<div class="col-sm-4">
+                	<p class="event-time">Evening</p>
+                    <p class="event-type"><span class="class-tag">Class Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Class of 1982 35th Reunion Celebration</p>
+                    <p class="location">Location: Tower Cafe, Tisch Library</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">10:45 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Candlelight Procession</p>
+                    <p class="location">Location: Leaves From Campus Center</p>
+                    <p class="summary">Join us for a beautiful, candlelit procession through the Alumni Gate to the Goddard Chapel terrace.</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
+            <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">11:00 pm</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">Top O' The Hill Tribute and Ringing of Chapel Bells</p>
+                    <p class="location">Location: Goddard Chapel Terrace</p>
+                    <p class="tags">Saturday May 20</p>
+            	</div>
+        	</div>
       </div>
+      <!-- SUNDAY -->
+      <div class="day">
+      	<h2 class="date col-sm-12">Sunday, May 21</h2>
+        <!-- EVENT BLOCK -->
+            <div class="event col-sm-12 main-event featured-event">
+        		<div class="col-sm-4">
+                	<p class="event-time">9:30 am</p>
+                    <p class="event-type"><span class="main-tag">Main Event</span></p>
+                </div>
+       		  <div class="details col-sm-8">
+           		  <p class="title">161st Commencement</p>
+                    <p class="location">Location: On the Green</p>
+                    <p class="tags">Sunday May 21</p>
+            	</div>
+        	</div>
+       </div>
     </div>
+    <!-- END SCHEDULE -->
     </div><!-- /.container -->
     <footer class="footer">
     	<div class="container">
@@ -243,25 +640,33 @@
   
   <!-- Custom filtering and page behavior -->
   <script>
+  		/* Makes search case-sensitive (CSSTricks) */
+  		$.expr[":"].contains = $.expr.		createPseudo(function(arg) {
+    		return function( elem ) {
+        	return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+    	};
+		});
+		
+  		var isActive = new Boolean(false);
+		
 		$( document ).ready(function() {
-			var isActive = new Boolean(false);
-			
 			$(window).resize(function() {
   				$('#filter-events').modal('hide');
 			});
 			
+			$("#searchbox").keyup(function(){ 
+				var searchTerm = $("#searchbox").val();
+				$(".event").hide();
+				$(".event:contains('"+searchTerm+"')").show();
+				removeHiddenDays();
+			});
+			
+			/* Desktop Navigation */
 			$("#seminar-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#seminar-button");
 				displaySeminars();
 				removeHiddenDays();
-			});
-			
-			$("#seminar-button-mobile").click(function(event) {
-	    		event.preventDefault();
-				isActive = true;
-				setActiveCategory("#seminar-button-mobile");
-				collapseClassYearsSelector(); 
 			});
 			
 			$("#main-button").click(function(event) {
@@ -271,25 +676,11 @@
 				removeHiddenDays();
 			});
 			
-			$("#main-button-mobile").click(function(event) {
-				event.preventDefault();
-				isActive = true;
-				setActiveCategory("#main-button-mobile");
-				collapseClassYearsSelector(); 
-			});
-			
 			$("#class-button").click(function(event) {
 	    		event.preventDefault();
 				setActiveCategory("#class-button");
 				displayAllClassEvents();
 				removeHiddenDays();
-			});
-			
-			$("#class-button-mobile").click(function(event) {
-	    		event.preventDefault();
-				isActive = true;
-				setActiveCategory("#class-button-mobile");
-				collapseClassYearsSelector(); 
 			});
 			
 			$("#all-button").click(function(event) {
@@ -298,21 +689,47 @@
 				displayAllEvents();
 			});
 			
+			/* Mobile Navigation */
+			$("#main-button-mobile").click(function(event) {
+				event.preventDefault();
+				setActiveCategory("#main-button-mobile");
+				collapseClassYearsSelector(); 
+			});
+			
+			$("#seminar-button-mobile").click(function(event) {
+	    		event.preventDefault();
+				setActiveCategory("#seminar-button-mobile");
+				collapseClassYearsSelector(); 
+			});
+			
+			$("#class-button-mobile").click(function(event) {
+	    		event.preventDefault();
+				setActiveCategory("#class-button-mobile");
+				collapseClassYearsSelector(); 
+			});
+			
 			$("#all-button-mobile").click(function(event) {
 	    		event.preventDefault();
-				isActive = true;
 				setActiveCategory("#all-button-mobile");
 				collapseClassYearsSelector(); 
 			});
 			
+			$("#open-house-button-mobile").click(function(event) {
+				event.preventDefault();
+				setActiveCategory("#open-house-button-mobile");
+			});
+			
+			$("#religious-button-mobile").click(function(event) {
+				event.preventDefault();
+				setActiveCategory("#religious-button-mobile");
+			});
+			
 			$("#by-class-button-mobile").click(function(event) {	
 				event.preventDefault();
-				isActive = false;
 				removeActiveCategory();
 			});
 			
 			$("option").click(function(event) {
-				isActive = false;
 				removeActiveCategory();
 			});
 			
@@ -334,6 +751,14 @@
 						displayMainEvents();
 						removeHiddenDays();
 					}
+					if (id === "religious-button-mobile") {
+						displayReligiousEvents();
+						removeHiddenDays();
+					}
+					if (id === "open-house-button-mobile") {
+						displayOpenHouseEvents();
+						removeHiddenDays();
+					}
 
 				} else {
     				var year = "";
@@ -350,15 +775,10 @@
 		});
 		
 		function displayClassEvents(classYear) {
-			if (classYear == "1953") {
+			if (classYear == "1982") {
 				$(".event").hide();
-				$(".main-event").show();
-				$(".1953").show();
-			}
-			if (classYear == "1962") {
-				$(".event").hide();
-				$(".main-event").show();
-				$(".1962").show();
+				/*$(".featured-event").show();*/
+				$(".1982").show();
 			}
 			removeHiddenDays();
 		}
@@ -375,13 +795,23 @@
 		
 		function displayAllClassEvents() {
 			$(".event").hide();
-			$(".main-event").show();
+			/*$(".featured-event").show();*/
 			$(".class-event").show();
 		}
 		
 		function displayAllEvents() {
 			$(".event").show();
 			$(".day").show();
+		}
+		
+		function displayOpenHouseEvents() {
+			$(".event").hide();
+			$(".open-house").show();
+		}
+		
+		function displayReligiousEvents() {
+			$(".event").hide();
+			$(".religious-event").show();
 		}
 		
 		function removeHiddenDays() {
@@ -404,10 +834,12 @@
 		function setActiveCategory(button) {
 			$(".active-category").removeClass("active-category");
 			$(button).addClass("active-category");
+			isActive = true;
 		}
 		
 		function removeActiveCategory() {
 			$(".active-category").removeClass("active-category");
+			isActive = false;
 		}
 		
 		function collapseClassYearsSelector() {
