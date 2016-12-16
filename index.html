@@ -43,8 +43,8 @@
         	<!-- MOBILE NAVIGATION -->
    			<div class="center visible-xs visible-sm hidden-md hidden-lg secondary-navbar-mobile">
         <h1>Schedule</h1>
-        <input type="text" id="searchbox" name="search" placeholder="Search...">
-    	<!--<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#filter-events" href="#">Filter Events</button>-->
+        
+    	<button type="button" class="btn btn-default btn-lg btn-blue btn-custom dropdown-toggle" data-toggle="modal" data-target="#filter-events" href="#">Filter Events</button>
         
         <!-- Modal -->
 			<div class="modal modal-fullscreen fade" id="filter-events" tabindex="-1" role="dialog" aria-labelledby="Filter Events">
@@ -640,25 +640,11 @@
   
   <!-- Custom filtering and page behavior -->
   <script>
-  		/* Makes search case-sensitive (CSSTricks) */
-  		$.expr[":"].contains = $.expr.		createPseudo(function(arg) {
-    		return function( elem ) {
-        	return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-    	};
-		});
-		
   		var isActive = new Boolean(false);
 		
 		$( document ).ready(function() {
 			$(window).resize(function() {
   				$('#filter-events').modal('hide');
-			});
-			
-			$("#searchbox").keyup(function(){ 
-				var searchTerm = $("#searchbox").val();
-				$(".event").hide();
-				$(".event:contains('"+searchTerm+"')").show();
-				removeHiddenDays();
 			});
 			
 			/* Desktop Navigation */
